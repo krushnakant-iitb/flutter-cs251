@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 0.37.0">
+  <meta name="description" content="flutter_auth API docs, for the Dart programming language.">
+  <title>flutter_auth - Dart API docs</title>
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+</head>
+
+<body data-base-href=""
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">flutter_auth package</li>
+  </ol>
+  <div class="self-name">flutter_auth</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li class="self-crumb">flutter_auth package</li>
+    </ol>
+    
+    <h5 class="hidden-xs"><span class="package-name">flutter_auth</span> <span class="package-kind">package</span></h5>
+    <ol>
+          <li class="section-title">Libraries</li>
+          <li><a href="Screens_Home_acknowledgement/Screens_Home_acknowledgement-library.html">acknowledgement</a></li>
+          <li><a href="Screens_CourseHome_addStud/Screens_CourseHome_addStud-library.html">addStud</a></li>
+          <li><a href="Screens_Login_components_background/Screens_Login_components_background-library.html">background</a></li>
+          <li><a href="Screens_Login_components_body/Screens_Login_components_body-library.html">body</a></li>
+          <li><a href="constants/constants-library.html">constants</a></li>
+          <li><a href="Screens_Home_course/Screens_Home_course-library.html">course</a></li>
+          <li><a href="Screens_Home_courseform/Screens_Home_courseform-library.html">courseform</a></li>
+          <li><a href="Screens_CourseHome_coursehome/Screens_CourseHome_coursehome-library.html">coursehome</a></li>
+          <li><a href="Screens_Home_courselist/Screens_Home_courselist-library.html">courselist</a></li>
+          <li><a href="Screens_Home_coursestatus/Screens_Home_coursestatus-library.html">coursestatus</a></li>
+          <li><a href="Screens_Home_coursewrapper/Screens_Home_coursewrapper-library.html">coursewrapper</a></li>
+          <li><a href="function/function-library.html">function</a></li>
+          <li><a href="Screens_Home_home/Screens_Home_home-library.html">home</a></li>
+          <li><a href="Screens_Login_login_screen/Screens_Login_login_screen-library.html">login_screen</a></li>
+          <li><a href="Screens_After-Login_logout/Screens_After-Login_logout-library.html">logout</a></li>
+          <li><a href="main/main-library.html">main</a></li>
+          <li><a href="Screens_CourseHome_message/Screens_CourseHome_message-library.html">message</a></li>
+          <li><a href="Screens_Home_message-read/Screens_Home_message-read-library.html">message-read</a></li>
+          <li><a href="Screens_CourseHome_messageAllform/Screens_CourseHome_messageAllform-library.html">messageAllform</a></li>
+          <li><a href="Screens_CourseHome_messageTAform/Screens_CourseHome_messageTAform-library.html">messageTAform</a></li>
+          <li><a href="Screens_CourseHome_messagelist/Screens_CourseHome_messagelist-library.html">messagelist</a></li>
+          <li><a href="Screens_CourseHome_messagewrapper/Screens_CourseHome_messagewrapper-library.html">messagewrapper</a></li>
+          <li><a href="Screens_ReadBy_readby/Screens_ReadBy_readby-library.html">readby</a></li>
+          <li><a href="components_rounded_button/components_rounded_button-library.html">rounded_button</a></li>
+          <li><a href="components_rounded_input_field/components_rounded_input_field-library.html">rounded_input_field</a></li>
+          <li><a href="components_rounded_password_field/components_rounded_password_field-library.html">rounded_password_field</a></li>
+          <li><a href="components_text_field_container/components_text_field_container-library.html">text_field_container</a></li>
+          <li><a href="Screens_ReadBy_user/Screens_ReadBy_user-library.html">user</a></li>
+          <li><a href="Screens_UserCourse_usercourse/Screens_UserCourse_usercourse-library.html">usercourse</a></li>
+    </ol>
+  </div>
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <section class="desc markdown">
+        <h1 id="notify-me--a-flutter-application">Notify Me- A Flutter Application</h1>
+<p>This is a project that is a flutter application, 
+which includes most of the dashboard features, except signup. 
+Specialized features like notifications are android-specific 
+while others are also available on ios.</p>
+<h1 id="key-features">Key Features</h1>
+<h2 id="login-page">Login Page</h2>
+<p>This page facilitates the login of a user. It has a 
+specially designed pleasant look,
+giving a nice User Experience. Once Logged In, User cannot use 
+Android's back button; so the password is not revealed.</p>
+<h2 id="notifications">Notifications</h2>
+<p>This app can receive notifications sent by Professors/TAs if the 
+user logged in is registered for the course.
+If it is a low priority message, it only appears on the 
+notifications list.
+If high priority, the user receives a push notification, which
+overrides silent/DND features and rings a tone unless 
+the device is on mute.</p>
+<h2 id="acknowledgement">Acknowledgement</h2>
+<p>If there are some messages not acknowledged by the logged in user,
+this page is shown. It lists all the unread messages by the user.
+This page can only be escaped once the "Acknowledge" button 
+is tapped by the user to acknowledge.
+After this, the user's name is added in the list of users who have 
+read the message.</p>
+<h2 id="home-page">Home Page</h2>
+<p>After Login, user is redirected to this page unless some Messages 
+require acknowledgement.
+It contains the List of courses the user is registered for.
+If the user is a professor he can add courses.</p>
+<h2 id="members-page">Members Page</h2>
+<p>A user when clicks on the "members" button on a course card is redirected to this page.
+Everyone can see the list of users in a course that they are part of including the professor himself.
+The professor can also remove students of the course if suspicious activities are detected.</p>
+<h2 id="course-home-page">Course Home Page</h2>
+<p>Messages can be sent and received.
+Prof can send messages to both TA and student .
+Message to TA cannot be seen by the students.
+TA can send messages to students not professors.
+Professor can add both TA and students but TA can only add students
+Students do not have any control(Especially they can’t send messages/add users to make sure to have only important stuff on the page).
+So each message has a header which contains the sender's username
+which on click gives the list of users who read the  message
+The body contains the message.
+Message has two forms.Low priority and High Priority Messages.</p>
+<h2 id="readby-page">ReadBy Page</h2>
+<p>If a user clicks on a message, it redirects to this page.
+It contains the list of users who have acknowledged that 
+particular message.</p>
+      </section>
+      
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="acknowledgement">
+            <span class="name"><a href="Screens_Home_acknowledgement/Screens_Home_acknowledgement-library.html">acknowledgement</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="addStud">
+            <span class="name"><a href="Screens_CourseHome_addStud/Screens_CourseHome_addStud-library.html">addStud</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="background">
+            <span class="name"><a href="Screens_Login_components_background/Screens_Login_components_background-library.html">background</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="body">
+            <span class="name"><a href="Screens_Login_components_body/Screens_Login_components_body-library.html">body</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="constants">
+            <span class="name"><a href="constants/constants-library.html">constants</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="course">
+            <span class="name"><a href="Screens_Home_course/Screens_Home_course-library.html">course</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="courseform">
+            <span class="name"><a href="Screens_Home_courseform/Screens_Home_courseform-library.html">courseform</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="coursehome">
+            <span class="name"><a href="Screens_CourseHome_coursehome/Screens_CourseHome_coursehome-library.html">coursehome</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="courselist">
+            <span class="name"><a href="Screens_Home_courselist/Screens_Home_courselist-library.html">courselist</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="coursestatus">
+            <span class="name"><a href="Screens_Home_coursestatus/Screens_Home_coursestatus-library.html">coursestatus</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="coursewrapper">
+            <span class="name"><a href="Screens_Home_coursewrapper/Screens_Home_coursewrapper-library.html">coursewrapper</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="function">
+            <span class="name"><a href="function/function-library.html">function</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="home">
+            <span class="name"><a href="Screens_Home_home/Screens_Home_home-library.html">home</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="login_screen">
+            <span class="name"><a href="Screens_Login_login_screen/Screens_Login_login_screen-library.html">login_screen</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="logout">
+            <span class="name"><a href="Screens_After-Login_logout/Screens_After-Login_logout-library.html">logout</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="main">
+            <span class="name"><a href="main/main-library.html">main</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="message">
+            <span class="name"><a href="Screens_CourseHome_message/Screens_CourseHome_message-library.html">message</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="message-read">
+            <span class="name"><a href="Screens_Home_message-read/Screens_Home_message-read-library.html">message-read</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="messageAllform">
+            <span class="name"><a href="Screens_CourseHome_messageAllform/Screens_CourseHome_messageAllform-library.html">messageAllform</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="messageTAform">
+            <span class="name"><a href="Screens_CourseHome_messageTAform/Screens_CourseHome_messageTAform-library.html">messageTAform</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="messagelist">
+            <span class="name"><a href="Screens_CourseHome_messagelist/Screens_CourseHome_messagelist-library.html">messagelist</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="messagewrapper">
+            <span class="name"><a href="Screens_CourseHome_messagewrapper/Screens_CourseHome_messagewrapper-library.html">messagewrapper</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="readby">
+            <span class="name"><a href="Screens_ReadBy_readby/Screens_ReadBy_readby-library.html">readby</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="rounded_button">
+            <span class="name"><a href="components_rounded_button/components_rounded_button-library.html">rounded_button</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="rounded_input_field">
+            <span class="name"><a href="components_rounded_input_field/components_rounded_input_field-library.html">rounded_input_field</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="rounded_password_field">
+            <span class="name"><a href="components_rounded_password_field/components_rounded_password_field-library.html">rounded_password_field</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="text_field_container">
+            <span class="name"><a href="components_text_field_container/components_text_field_container-library.html">text_field_container</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="user">
+            <span class="name"><a href="Screens_ReadBy_user/Screens_ReadBy_user-library.html">user</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+          <dt id="usercourse">
+            <span class="name"><a href="Screens_UserCourse_usercourse/Screens_UserCourse_usercourse-library.html">usercourse</a></span>           
+          </dt>
+          <dd>
+             
+          </dd>
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    flutter_auth
+      1.0.0+1
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

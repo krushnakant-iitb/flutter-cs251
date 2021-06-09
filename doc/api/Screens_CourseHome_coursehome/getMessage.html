@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getMessage function from the coursehome library, for the Dart programming language.">
+  <title>getMessage function - coursehome library - Dart API</title>
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../static-assets/github.css">
+  <link rel="stylesheet" href="../static-assets/styles.css">
+  <link rel="icon" href="../static-assets/favicon.png">
+
+</head>
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">flutter_auth</a></li>
+    <li><a href="../Screens_CourseHome_coursehome/Screens_CourseHome_coursehome-library.html">coursehome</a></li>
+    <li class="self-crumb">getMessage function</li>
+  </ol>
+  <div class="self-name">getMessage</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="../index.html">flutter_auth</a></li>
+      <li><a href="../Screens_CourseHome_coursehome/Screens_CourseHome_coursehome-library.html">coursehome</a></li>
+      <li class="self-crumb">getMessage function</li>
+    </ol>
+    
+    <h5>coursehome library</h5>
+    <ol>
+      <li class="section-title"><a href="../Screens_CourseHome_coursehome/Screens_CourseHome_coursehome-library.html#classes">Classes</a></li>
+      <li><a href="../Screens_CourseHome_coursehome/CourseHomePage-class.html">CourseHomePage</a></li>
+      <li><a href="../Screens_CourseHome_coursehome/CourseHomePageState-class.html">CourseHomePageState</a></li>
+    
+    
+    
+    
+    
+      <li class="section-title"><a href="../Screens_CourseHome_coursehome/Screens_CourseHome_coursehome-library.html#functions">Functions</a></li>
+      <li><a href="../Screens_CourseHome_coursehome/bar.html">bar</a></li>
+      <li><a href="../Screens_CourseHome_coursehome/getMessage.html">getMessage</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-function">getMessage</span> function  </h1></div>
+
+    <section class="multi-line-signature">
+        <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../Screens_CourseHome_message/Message-class.html">Message</a></span>&gt;</span></span>&gt;</span></span>
+                <span class="name ">getMessage</span>
+(<wbr><ol class="parameter-list"><li><span class="parameter" id="getMessage-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span></li>
+</ol>)
+    </section>
+    <section class="desc markdown">
+      <p>This Function requests from the backend and returns
+the list of messages corresponding to the course with
+course_id <code>id</code>. It is called whenever
+<a href="../Screens_CourseHome_coursehome/CourseHomePageState-class.html">CourseHomePageState</a> is created.</p>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">Future&lt;List&lt;Message&gt;&gt; getMessage(int id) async {
+  String tok = await prefs.getString(&#39;token&#39;);
+  final response = await http.get(
+    &#39;https:&#47;&#47;back-dashboard.herokuapp.com&#47;api&#47;messages&#47;&#39; + id.toString() + &#39;&#47;&#39;,
+    headers: &lt;String, String&gt;{
+      &#39;Content-Type&#39;: &#39;application&#47;json; charset=UTF-8&#39;,
+      &#39;Authorization&#39;: &#39;JWT &#39; + tok,
+    },
+  );
+  if (response.statusCode == 200) {
+    var V = jsonDecode(response.body) as List;
+    List&lt;Message&gt; cs = V.map((course) =&gt; Message.fromJson(course)).toList();
+    print(cs);
+    return cs;
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    flutter_auth
+      1.0.0+1
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../static-assets/typeahead.bundle.min.js"></script>
+<script src="../static-assets/highlight.pack.js"></script>
+<script src="../static-assets/URI.js"></script>
+<script src="../static-assets/script.js"></script>
+
+
+</body>
+
+</html>
